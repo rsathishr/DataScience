@@ -72,5 +72,31 @@ knn_pred = knn.predict(test)
 print(confusion_matrix(test_target,knn_pred))
 accuracy_score(test_target,knn_pred)
 
+##################
+# Random Forest  #
+##################
 
+from sklearn.ensemble import RandomForestClassifier
+
+rf = RandomForestClassifier(n_estimators=500)
+rf.fit(train,train_target)
+rf_pred = rf.predict(test)
+
+print(confusion_matrix(test_target,rf_pred))
+accuracy_score(test_target,rf_pred)
+
+
+###################
+##      SVM      ##
+###################
+
+from sklearn import svm
+
+svm = svm.SVC()
+
+svm.fit(train,train_target)
+svm_pred = svm.predict(test)
+
+print(confusion_matrix(test_target,svm_pred))
+accuracy_score(test_target,svm_pred)
 
