@@ -94,9 +94,3 @@ knn_pred = dig_knn.predict(test1)
 
 print(confusion_matrix(test_target, knn_pred))
 print(accuracy_score(test_target, knn_pred))
-
-
-
-
-
-
