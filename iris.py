@@ -20,7 +20,7 @@ iris = pd.read_csv("/home/sathish/Downloads/iris.csv")
 #Converting the data to train the model
 iris['Species'] = iris.Species.map({'setosa': 0, 'versicolor': 1, 'virginica': 2})
 
-#trsin,test split using the train_test_split function of test file size 40%
+#train,test split using the train_test_split function of test file size 40%
 train, test = tt(iris, test_size=0.4, random_state=5)
 
 #Target Variable
